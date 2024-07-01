@@ -1,0 +1,505 @@
+openapi: 3.0.0
+info:
+  title: Kuburan Tentara
+  version: 1.0.0
+servers:
+  - url: https://130.162.195.228
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+tags:
+  - name: AUTH
+  - name: Data Mayat
+  - name: Plot Pemakaman
+  - name: Kuburan
+  - name: Pengelola Pemakaman
+  - name: Kunjungan
+paths:
+  /mhs714220016/regis:
+    post:
+      tags:
+        - AUTH
+      summary: Register
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                username: roger
+                email: rogeroyen12@gmail.com
+                password: oyen
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /mhs714220016/login:
+    post:
+      tags:
+        - AUTH
+      summary: Login
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                username: roger
+                email: rogeroyen12@gmail.com
+                password: oyen
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /mhs714220016/datamayat:
+    get:
+      tags:
+        - Data Mayat
+      summary: GET
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - Data Mayat
+      summary: POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                nama_lengkap: Snusnu Rilety
+                pangkat: Jendral
+                tanggal_lahir: '1998-11-01'
+                tanggal_wafat: '2024-02-21'
+                nomor_identitas: '80009233'
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /mhs714220016/datamayat/{id}:
+    delete:
+      tags:
+        - Data Mayat
+      summary: DELETE
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The ID of the data to delete
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    put:
+      tags:
+        - Data Mayat
+      summary: PUT
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The ID of the data to update
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                nama_lengkap: Snusnu Riley
+                pangkat: Jendral
+                tanggal_lahir: '1998-11-01'
+                tanggal_wafat: '2024-02-21'
+                nomor_identitas: '80009233'
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /mhs714220016/plotpemakaman:
+    get:
+      tags:
+        - Plot Pemakaman
+      summary: GET
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - Plot Pemakaman
+      summary: POST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                nomor_plot: A2
+                status_plot: Tersedia
+                keterangan: Plot untuk tentara A2
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+/mhs714220016/plotpemakaman/{id}:
+  put:
+    tags:
+      - Plot Pemakaman
+    summary: Update Plot Pemakaman by ID
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        description: ID of the plot to update
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              nomor_plot:
+                type: string
+                example: A2
+              status_plot:
+                type: string
+                example: Terisi
+              keterangan:
+                type: string
+                example: Plot untuk tentara A2
+    security:
+      - bearerAuth: []
+    responses:
+      '200':
+        description: Successful response
+        content:
+          application/json: {}
+  delete:
+    tags:
+      - Plot Pemakaman
+    summary: Delete Plot Pemakaman by ID
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        description: ID of the plot to delete
+    security:
+      - bearerAuth: []
+    responses:
+      '200':
+        description: Successful response
+        content:
+          application/json: {}
+
+# Define the base path
+/mhs714220016/kuburan:
+  get:
+    tags:
+      - Kuburan
+    summary: GET
+    responses:
+      '200':
+        description: Successful response
+        content:
+          application/json: {}
+  post:
+    tags:
+      - Kuburan
+    summary: POST
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            example:
+              plot_id: 2
+              tentara_id: 3
+              nomor_kuburan: '02'
+              tanggal_dikubur: '2024-02-21'
+              status_kuburan: terawat
+              keterangan: kuburannya Snusnu
+    security:
+      - bearerAuth: []
+    responses:
+      '200':
+        description: Successful response
+        content:
+          application/json: {}
+
+/mhs714220016/kuburan/{id}:
+  put:
+    tags:
+      - Kuburan
+    summary: Update Kuburan by ID
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        description: ID of the grave to update
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              plot_id:
+                type: integer
+                example: 2
+              tentara_id:
+                type: integer
+                example: 3
+              nomor_kuburan:
+                type: string
+                example: '04'
+              tanggal_dikubur:
+                type: string
+                format: date
+                example: '2024-02-21'
+              status_kuburan:
+                type: string
+                example: terawat
+              keterangan:
+                type: string
+                example: kuburannya Snusnu
+    security:
+      - bearerAuth: []
+    responses:
+      '200':
+        description: Successful response
+        content:
+          application/json: {}
+  delete:
+    tags:
+      - Kuburan
+    summary: Delete Kuburan by ID
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        description: ID of the grave to delete
+    security:
+      - bearerAuth: []
+    responses:
+      '200':
+        description: Successful response
+        content:
+          application/json: {}
+
+/mhs714220016/pengelolapemakaman:
+  get:
+    tags:
+      - Pengelola Pemakaman
+    summary: GET
+    responses:
+      '200':
+        description: Successful response
+        content:
+          application/json: {}
+  post:
+    tags:
+      - Pengelola Pemakaman
+    summary: POST
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            example:
+              nama_lengkap: Hudza Grahitama
+              jabatan: Leutenant
+              nomor_telepon: '0858675544'
+              email: grahhudza@gmail.com
+              alamat: Jl. Sukma 2 Block 6 No.23
+    security:
+      - bearerAuth: []
+    responses:
+      '200':
+        description: Successful response
+        content:
+          application/json: {}
+
+/mhs714220016/pengelolapemakaman/{id}:
+  put:
+    tags:
+      - Pengelola Pemakaman
+    summary: Update Pengelola Pemakaman by ID
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        description: ID of the cemetery manager to update
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              nama_lengkap:
+                type: string
+                example: Hudza Grahitama
+              jabatan:
+                type: string
+                example: Leutenant
+              nomor_telepon:
+                type: string
+                example: '0858675544'
+              email:
+                type: string
+                example: grahhudza@gmail.com
+              alamat:
+                type: string
+                example: Jl. Sukma 2 Block 6 No.123
+    security:
+      - bearerAuth: []
+    responses:
+      '200':
+        description: Successful response
+        content:
+          application/json: {}
+  delete:
+    tags:
+      - Pengelola Pemakaman
+    summary: Delete Pengelola Pemakaman by ID
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        description: ID of the cemetery manager to delete
+    security:
+      - bearerAuth: []
+    responses:
+      '200':
+        description: Successful response
+        content:
+          application/json: {}
+
+/mhs714220016/kunjungan:
+  get:
+    tags:
+      - Kunjungan
+    summary: GET
+    responses:
+      '200':
+        description: Successful response
+        content:
+          application/json: {}
+  post:
+    tags:
+      - Kunjungan
+    summary: POST
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            example:
+              kuburan_id: 3
+              tanggal_kunjungan: '2024-05-20'
+              nama_pengunjung: Zamy Skibidi
+              hubungan: friends
+              keterangan: ziarah kubur
+    security:
+      - bearerAuth: []
+    responses:
+      '200':
+        description: Successful response
+        content:
+          application/json: {}
+
+/mhs714220016/kunjungan/{id}:
+  put:
+    tags:
+      - Kunjungan
+    summary: Update Kunjungan by ID
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        description: ID of the visit to update
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              kuburan_id:
+                type: integer
+                example: 2
+              tanggal_kunjungan:
+                type: string
+                format: date
+                example: '2024-05-25'
+              nama_pengunjung:
+                type: string
+                example: Zamy Skibidi
+              hubungan:
+                type: string
+                example: friends
+              keterangan:
+                type: string
+                example: ziarah kubur
+    security:
+      - bearerAuth: []
+    responses:
+      '200':
+        description: Successful response
+        content:
+          application/json: {}
+  delete:
+    tags:
+      - Kunjungan
+    summary: Delete Kunjungan by ID
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        description: ID of the visit to delete
+    security:
+      - bearerAuth: []
+    responses:
+      '200':
+        description: Successful response
+        content:
+          application/json: {}
+

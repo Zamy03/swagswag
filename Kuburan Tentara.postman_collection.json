@@ -1,0 +1,826 @@
+{
+	"info": {
+		"_postman_id": "02c58822-e877-40cd-8687-feeac5aaa10f",
+		"name": "Kuburan Tentara",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33355391"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"roger\",\r\n    \"email\": \"rogeroyen12@gmail.com\",\r\n    \"password\": \"oyen\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/regis",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"regis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"roger\",\r\n    \"email\": \"rogeroyen12@gmail.com\",\r\n    \"password\": \"oyen\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/login",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Data Mayat",
+			"item": [
+				{
+					"name": "GET",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imt1Y2luZyIsImV4cCI6MTcxOTY4MDExM30.3FC6aDGh55sYXNcTD7y4gnlqDWiwT4jI9-t1uPw1MjQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/datamayat",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"datamayat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvZ2VyIiwiZXhwIjoxNzE5NzYxMDc3fQ.7swsaT6lSUF4wCQF7uFpDbJ1eMVE95bygSv4QlOPvVY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/datamayat/3",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"datamayat",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvZ2VyIiwiZXhwIjoxNzE5NzYxOTQ5fQ.p1A6BCv9Rc85nUdVa90tDeg3SK-6jQsKkBZjHLZrg8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_lengkap\": \"Snusnu Rilety\",\r\n    \"pangkat\": \"Jendral\",\r\n    \"tanggal_lahir\": \"1998-11-01\",\r\n    \"tanggal_wafat\": \"2024-02-21\",\r\n    \"nomor_identitas\": \"80009233\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/datamayat",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"datamayat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvZ2VyIiwiZXhwIjoxNzE5NzYxMDc3fQ.7swsaT6lSUF4wCQF7uFpDbJ1eMVE95bygSv4QlOPvVY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_lengkap\": \"Snusnu Riley\",\r\n    \"pangkat\": \"Jendral\",\r\n    \"tanggal_lahir\": \"1998-11-01\",\r\n    \"tanggal_wafat\": \"2024-02-21\",\r\n    \"nomor_identitas\": \"80009233\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/datamayat/3",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"datamayat",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Plot Pemakaman",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/plotpemakaman",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"plotpemakaman"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvZ2VyIiwiZXhwIjoxNzE5NzYxOTQ5fQ.p1A6BCv9Rc85nUdVa90tDeg3SK-6jQsKkBZjHLZrg8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomor_plot\": \"A2\",\r\n    \"status_plot\": \"Tersedia\",\r\n    \"keterangan\": \"Plot untuk tentara A2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/plotpemakaman",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"plotpemakaman"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvZ2VyIiwiZXhwIjoxNzE5NzYxOTQ5fQ.p1A6BCv9Rc85nUdVa90tDeg3SK-6jQsKkBZjHLZrg8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nomor_plot\": \"A2\",\r\n    \"status_plot\": \"Terisi\",\r\n    \"keterangan\": \"Plot untuk tentara A2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/plotpemakaman/3",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"plotpemakaman",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imt1Y2luZyIsImV4cCI6MTcxOTcxNzQ4Mn0.DEGmZWx8rlz7eNKLzn0mExuebE9Pa7aCNgVyjhiCVfE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/plotpemakaman/3",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"plotpemakaman",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kuburan",
+			"item": [
+				{
+					"name": "GET",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/kuburan",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"kuburan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvZ2VyIiwiZXhwIjoxNzE5NzYxOTQ5fQ.p1A6BCv9Rc85nUdVa90tDeg3SK-6jQsKkBZjHLZrg8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"plot_id\": 2,\r\n    \"tentara_id\": 3,\r\n    \"nomor_kuburan\": \"02\",\r\n    \"tanggal_dikubur\": \"2024-02-21\",\r\n    \"status_kuburan\": \"terawat\",\r\n    \"keterangan\": \"kuburannya Snusnu\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/kuburan",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"kuburan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvZ2VyIiwiZXhwIjoxNzE5NzYxOTQ5fQ.p1A6BCv9Rc85nUdVa90tDeg3SK-6jQsKkBZjHLZrg8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"plot_id\": 2,\r\n    \"tentara_id\": 3,\r\n    \"nomor_kuburan\": \"04\",\r\n    \"tanggal_dikubur\": \"2024-02-21\",\r\n    \"status_kuburan\": \"terawat\",\r\n    \"keterangan\": \"kuburannya Snusnu\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/kuburan/3",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"kuburan",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imt1Y2luZyIsImV4cCI6MTcxOTcxOTUzOH0.bTtXdUokhDDfAFSdkoOUoSN61YRhI7dPyx0xOrq9Pd4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/kuburan/3",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"kuburan",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pengelola Pemakaman",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/pengelolapemakaman",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"pengelolapemakaman"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvZ2VyIiwiZXhwIjoxNzE5NzYxOTQ5fQ.p1A6BCv9Rc85nUdVa90tDeg3SK-6jQsKkBZjHLZrg8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_lengkap\": \"Hudza Grahitama\",\r\n    \"jabatan\": \"Leutenant\",\r\n    \"nomor_telepon\": \"0858675544\",\r\n    \"email\": \"grahhudza@gmail.com\",\r\n    \"alamat\": \"Jl. Sukma 2 Block 6 No.23\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/pengelolapemakaman",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"pengelolapemakaman"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvZ2VyIiwiZXhwIjoxNzE5NzYxOTQ5fQ.p1A6BCv9Rc85nUdVa90tDeg3SK-6jQsKkBZjHLZrg8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_lengkap\": \"Hudza Grahitama\",\r\n    \"jabatan\": \"Leutenant\",\r\n    \"nomor_telepon\": \"0858675544\",\r\n    \"email\": \"grahhudza@gmail.com\",\r\n    \"alamat\": \"Jl. Sukma 2 Block 6 No.123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/pengelolapemakaman/4",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"pengelolapemakaman",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imt1Y2luZyIsImV4cCI6MTcxOTcxOTUzOH0.bTtXdUokhDDfAFSdkoOUoSN61YRhI7dPyx0xOrq9Pd4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/pengelolapemakaman/3",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"pengelolapemakaman",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kunjungan",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/kunjungan",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"kunjungan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvZ2VyIiwiZXhwIjoxNzE5NzYxOTQ5fQ.p1A6BCv9Rc85nUdVa90tDeg3SK-6jQsKkBZjHLZrg8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"kuburan_id\": 3,\r\n    \"tanggal_kunjungan\": \"2024-05-20\",\r\n    \"nama_pengunjung\": \"Zamy Skibidi\",\r\n    \"hubungan\": \"friends\",\r\n    \"keterangan\": \"ziarah kubur\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/kunjungan",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"kunjungan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvZ2VyIiwiZXhwIjoxNzE5NzYxOTQ5fQ.p1A6BCv9Rc85nUdVa90tDeg3SK-6jQsKkBZjHLZrg8w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"kuburan_id\": 2,\r\n    \"tanggal_kunjungan\": \"2024-05-25\",\r\n    \"nama_pengunjung\": \"Zamy Skibidi\",\r\n    \"hubungan\": \"friends\",\r\n    \"keterangan\": \"ziarah kubur\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/kunjungan/3",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"kunjungan",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Imt1Y2luZyIsImV4cCI6MTcxOTcyMTcxMn0.7s5LMKcsdujfCCsy_o0I-OOEqAg9QBAWRWegC-0BA34",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://130.162.195.228/mhs714220016/kunjungan/3",
+							"protocol": "https",
+							"host": [
+								"130",
+								"162",
+								"195",
+								"228"
+							],
+							"path": [
+								"mhs714220016",
+								"kunjungan",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
